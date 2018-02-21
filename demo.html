@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		h1 {
+			text-align: center;
+			margin-top: 200px;
+		}
+	</style>
+</head>
+	<h1></h1>
+<body>
+	<script src="script.js"></script>
+	<script>
+		window.addEventListener('devtoolschange', ({detail}) => {
+			if(detail.open) {
+				document.getElementsByTagName('h1')[0].innerText = "Not recording...";
+			} else {
+				document.getElementsByTagName('h1')[0].innerText = "Recording...";
+			}
+		})
+	</script>
+</body>
+</html>
